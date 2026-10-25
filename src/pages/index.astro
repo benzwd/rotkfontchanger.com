@@ -1,280 +1,602 @@
 
 ---
 import "../styles/global.css";
+import { Type, WandSparkles, RotateCcw, Download } from "@lucide/astro";
 
-const github =
-  "https://github.com/benzwd/rotkfontchanger";
+const github = "https://github.com/benzwd/rotk-fonts-changer";
+const buyMeACoffee = "https://buymeacoffee.com/zwdev";
+const discord = "https://discord.gg/GAQcFTzs";
+
+const features = [
+  {
+    number: "01",
+    icon: Type,
+    title: "LIVE FONT PREVIEW",
+    description:
+      "See how your custom font looks before applying it to ROTK.",
+  },
+  {
+    number: "02",
+    icon: WandSparkles,
+    title: "ONE-CLICK APPLY",
+    description:
+      "Replace game font files with your selected TrueType font.",
+  },
+  {
+    number: "03",
+    icon: RotateCcw,
+    title: "RESTORE DEFAULTS",
+    description:
+      "Restore the original game fonts whenever you want.",
+  },
+];
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
 
-		<title>
-			ROTK Font Changer
-		</title>
+    <title>ROTK Font Changer</title>
 
-		<meta
-			name="description"
-			content="ROTK Font Changer is a free Windows utility for customizing ROTK Z1 game fonts. Preview custom TTF fonts, apply changes and restore defaults easily."
-		/>
+    <meta
+      name="description"
+      content="ROTK Font Changer is a free Windows utility for customizing ROTK Z1 game fonts. Preview custom TTF fonts, apply changes and restore defaults easily."
+    />
 
-		<meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow" />
 
-		<link
-			rel="canonical"
-			href="https://rotkfontchanger.com/"
-		/>
+    <link
+      rel="canonical"
+      href="https://rotkfontchanger.com/"
+    />
 
-		<link
-			rel="sitemap"
-			href="/sitemap-index.xml"
-		/>
+    <link
+      rel="sitemap"
+      href="/sitemap-index.xml"
+    />
 
-		<meta property="og:type" content="website" />
-		<meta
-			property="og:title"
-			content="ROTK Font Changer"
-		/>
-		<meta
-			property="og:description"
-			content="Customize your ROTK Z1 fonts with a free Windows desktop utility."
-		/>
-		<meta
-			property="og:url"
-			content="https://rotkfontchanger.com/"
-		/>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="ROTK Font Changer"
+    />
+    <meta
+      property="og:description"
+      content="Your font. Your game. Customize ROTK fonts with a free Windows utility."
+    />
+    <meta
+      property="og:url"
+      content="https://rotkfontchanger.com/"
+    />
 
-		<meta name="theme-color" content="#b91c2b" />
-	</head>
+    <meta name="theme-color" content="#0d0d0d" />
+  </head>
 
   <body class="min-h-screen">
-    <header class="border-b border-white/10">
-      <nav
-        class="mx-auto flex max-w-6xl items-center
-               justify-between px-6 py-5"
-      >
-        <a href="/" class="text-lg font-bold">
-          <span class="text-red-400">ROTK</span>
-          Font Changer
+    <header class="site-header">
+      <nav class="site-container nav-content">
+        <a href="/" class="brand" aria-label="ROTK Font Changer home">
+          <span class="brand-mark">ROTK</span>
+          <span class="brand-divider"></span>
+
+          <span class="brand-details">
+            <span class="brand-name">FONT CHANGER</span>
+            <span class="brand-subtitle">UNOFFICIAL UTILITY</span>
+          </span>
         </a>
 
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-sm text-zinc-400 hover:text-white"
-        >
-          GitHub ↗
-        </a>
-      </nav>
-    </header>
-
-    <main>
-      <section
-        class="relative mx-auto max-w-6xl px-6
-               py-28 text-center"
-      >
-		<div
-		class="absolute inset-0 -z-10
-				bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.18),transparent_65%)]"
-		></div>
-		
-        <span
-          class="rounded-full border border-red-500/30
-                 bg-red-500/10 px-4 py-2
-                 text-sm text-red-300"
-        >
-          Windows Desktop Utility
-        </span>
-
-        <h1
-          class="mt-8 text-5xl font-extrabold
-                 tracking-tight md:text-7xl"
-        >
-          Your font.
-          <span class="text-red-400">
-            Your game.
-          </span>
-        </h1>
-
-        <p
-          class="mx-auto mt-6 max-w-2xl
-                 text-lg leading-8 text-zinc-400"
-        >
-          Customize your ROTK fonts in seconds.
-          Preview, apply and restore your fonts
-          with a simple desktop application.
-        </p>
-
-        <div
-          class="mt-10 flex flex-wrap
-                 justify-center gap-4"
-        >
-          <span
-            class="cursor-not-allowed rounded-xl
-                   bg-red-600/50 px-7 py-4
-                   font-semibold text-white/80"
-            aria-disabled="true"
-          >
-            Download coming soon
-          </span>
+        <div class="nav-links">
+          <a href="#features">FEATURES</a>
 
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-xl border border-white/15
-                   px-7 py-4 font-semibold
-                   hover:bg-white/5"
           >
-            View on GitHub
+            GITHUB
           </a>
         </div>
+      </nav>
+    </header>
 
-        <p class="mt-5 text-sm text-zinc-500">
-          Windows • Free • Version 0.1.0
-        </p>
+    <main>
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
 
-      </section>
+        <div class="site-container hero-content">
+          <div class="eyebrow">
+            <span>CUSTOMIZATION</span>
+            <span class="eyebrow-line">━━━</span>
+            <span>FONTS</span>
+          </div>
 
-      <section
-        id="features"
-        class="mx-auto max-w-6xl px-6 pb-28"
-      >
-        <h2
-          class="mb-10 text-center text-3xl
-                 font-bold"
-        >
-          Everything you need.
-        </h2>
+          <h1 class="hero-title">
+            YOUR FONT.{" "}
+            <span>YOUR GAME.</span>
+          </h1>
 
-        <div class="grid gap-6 md:grid-cols-3">
-          {
-            [
-              {
-                icon: "Aa",
-                title: "Live Font Preview",
-                description:
-                  "See how your custom font looks before applying it.",
-              },
-              {
-                icon: "↗",
-                title: "One-Click Apply",
-                description:
-                  "Generate and replace the 19 game font files.",
-              },
-              {
-                icon: "↺",
-                title: "Restore Defaults",
-                description:
-                  "Restore the original fonts whenever you want.",
-              },
-            ].map((feature) => (
-              <article
-                class="rounded-2xl border border-white/10
-                       bg-white/[0.03] p-7"
-              >
-                <div
-                  class="mb-5 flex h-12 w-12
-                         items-center justify-center
-                         rounded-xl bg-red-500/15
-                         text-xl font-bold text-red-300"
-                >
-                  {feature.icon}
+          <p class="hero-description">
+            Customize the ROTK experience with your own font.
+            Preview, apply and restore your game fonts
+            with a simple Windows application.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              id="download-button"
+              class="button button-primary button-disabled"
+              aria-disabled="true"
+              tabindex="-1"
+            >
+              <Download size={19} stroke-width={2} />
+              <span id="download-label">
+                DOWNLOAD COMING SOON
+              </span>
+            </a>
+
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-secondary"
+            >
+              VIEW ON GITHUB
+            </a>
+          </div>
+
+          <div
+            id="download-stats"
+            class="download-stats"
+            aria-live="polite"
+          >
+            <Download size={14} stroke-width={1.8} />
+            <span id="download-count">0</span>
+            <span>downloads</span>
+          </div>
+
+          <div class="hero-meta">
+            <span class="status-dot"></span>
+            WINDOWS
+            <span class="meta-separator">/</span>
+            FREE
+            <span class="meta-separator">/</span>
+            <span>VERSION <span id="app-version">0.2.0</span></span>
+          </div>
+
+          <div class="comparison-section">
+            <div class="comparison-heading">
+              <div>
+                <span class="section-kicker">
+                  SEE THE DIFFERENCE
+                </span>
+
+                <h2>
+                  SAME GAME.{" "}
+                  <span>NEW LOOK.</span>
+                </h2>
+              </div>
+
+              <p>
+                Drag the slider to compare the original
+                game font with a custom font.
+              </p>
+            </div>
+
+            <div
+              class="comparison"
+              id="font-comparison"
+              style="--split: 50%;"
+            >
+              <img
+                class="comparison-image comparison-after"
+                src="/images/rotk-after.webp"
+                alt="ROTK game interface with a custom font"
+                draggable="false"
+                onerror="this.style.visibility='hidden'"
+              />
+
+              <div class="comparison-before-container">
+                <img
+                  class="comparison-image comparison-before"
+                  src="/images/rotk-before.webp"
+                  alt="ROTK game interface with its original font"
+                  draggable="false"
+                  onerror="this.style.visibility='hidden'"
+                />
+              </div>
+
+              <div class="comparison-placeholder" aria-hidden="true">
+                <div class="placeholder-top">
+                  <span>ROTK / FONT COMPARISON</span>
+                  <span>PREVIEW</span>
                 </div>
 
-                <h3 class="mb-3 text-xl font-semibold">
-                  {feature.title}
-                </h3>
+                <div class="placeholder-center">
+                  <span class="placeholder-word">GAGNEZ</span>
+                  <span class="placeholder-description">
+                    ADD YOUR BEFORE & AFTER SCREENSHOTS
+                  </span>
+                </div>
+              </div>
 
-                <p class="leading-7 text-zinc-400">
-                  {feature.description}
-                </p>
-              </article>
-            ))
-          }
+              <span class="comparison-label label-before">
+                BEFORE
+              </span>
+
+              <span class="comparison-label label-after">
+                AFTER
+              </span>
+
+              <div class="comparison-divider" aria-hidden="true">
+                <div class="comparison-handle">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 7L4 12L9 17M15 7L20 12L15 17"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <input
+                class="comparison-range"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                step="1"
+                aria-label="Compare original and custom ROTK fonts"
+              />
+            </div>
+
+            <div class="comparison-footer">
+              <span>
+                <span class="comparison-dot"></span>
+                ORIGINAL FONT
+              </span>
+
+              <span>DRAG TO COMPARE ↔</span>
+
+              <span>
+                <span class="comparison-dot red"></span>
+                CUSTOM FONT
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section">
+        <div class="site-container">
+          <div class="section-heading">
+            <span class="section-kicker">
+              BUILT FOR CUSTOMIZATION
+            </span>
+
+            <h2>
+              EVERYTHING YOU{" "}
+              <span>NEED.</span>
+            </h2>
+
+            <p>
+              Simple tools. Full control over your game fonts.
+            </p>
+          </div>
+
+          <div class="features-showcase">
+            <div class="features-preview">
+              <div class="features-preview-header">
+                <span>
+                  <span class="preview-status-dot"></span>
+                  APPLICATION PREVIEW
+                </span>
+
+                <span>WINDOWS / v<span id="app-version">0.2.0</span></span>
+              </div>
+
+              <div class="features-preview-image">
+                <img
+                  src="/images/image.png"
+                  alt="ROTK Font Changer Windows application screenshot"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="features-preview-footer">
+                <span>ROTK FONT CHANGER</span>
+                <span>DESKTOP UTILITY</span>
+              </div>
+            </div>
+
+            <div class="features-list">
+              {
+                features.map((feature) => {
+                  const Icon = feature.icon;
+
+                  return (
+                    <article class="feature-card">
+                      <div class="feature-icon">
+                        <Icon size={24} stroke-width={1.8} />
+                      </div>
+
+                      <div class="feature-content">
+                        <div class="feature-title-row">
+                          <h3>{feature.title}</h3>
+                          <span class="feature-number">
+                            {feature.number}
+                          </span>
+                        </div>
+
+                        <p>{feature.description}</p>
+                      </div>
+                    </article>
+                  );
+                })
+              }
+            </div>
+          </div>
+
+          <div class="features-bottom">
+            <span class="status-dot"></span>
+            OPEN SOURCE
+            <span class="meta-separator">/</span>
+            WINDOWS
+          </div>
         </div>
       </section>
     </main>
 
+    <a
+      href={buyMeACoffee}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="coffee-button"
+      aria-label="Support the project on Buy Me a Coffee"
+    >
+      <span class="coffee-icon">☕</span>
+      <span class="coffee-text">BUY ME A COFFEE</span>
+    </a>
 
-	<!-- Buy Me a Coffee floating button -->
-	<div
-	class="pointer-events-none sticky bottom-6 z-50
-			mx-auto flex max-w-6xl justify-end px-6"
-	>
-	<a
-		href="https://buymeacoffee.com/zwdev"
-		target="_blank"
-		rel="noopener noreferrer"
-		aria-label="Support me on Buy Me a Coffee"
-		class="group pointer-events-auto flex items-center
-			gap-2 rounded-full bg-[#FFDD00] p-4
-			text-black shadow-lg shadow-black/30
-			transition-all duration-300
-			hover:-translate-y-1 hover:shadow-xl
-			hover:shadow-yellow-500/20"
-	>
-		<span class="text-xl leading-none">☕</span>
+    <footer class="site-footer">
+      <div class="site-container footer-content">
+        <div class="footer-left">
+          <span>
+            © 2026 ROTK FONT CHANGER
+          </span>
 
-		<span
-		class="hidden max-w-0 overflow-hidden
-				whitespace-nowrap text-sm font-bold
-				opacity-0 transition-all duration-300
-				group-hover:max-w-40
-				group-hover:opacity-100
-				md:block"
-		>
-		Buy Me a Coffee
-		</span>
-	</a>
-	</div>
+          <span class="footer-divider">/</span>
 
+          <span>
+            MADE WITH ❤ BY{" "} 
+            <a
+              href="https://github.com/benzwd"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-author"
+            >
+              FENIIX
+            </a>
+          </span>
+        </div>
 
-    <footer class="border-t border-white/10 py-8">
-      <div
-        class="mx-auto flex max-w-6xl flex-wrap
-               justify-between gap-4 px-6
-               text-sm text-zinc-500"
-      >
-        <span>
-			© 2026 ROTK Font Changer — Made by{" "}
-			<a
-				href="https://github.com/benzwd"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="font-medium text-red-400 hover:text-red-300"
-			>
-				Feniix
-			</a>
-		</span>
+        <div class="footer-links">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SOURCE CODE
+          </a>
 
-		<div class="flex items-center gap-5">
-		<a
-			href={github}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="transition-colors hover:text-red-400"
-		>
-			Source code
-		</a>
+          <a
+            href={discord}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DISCORD
+          </a>
+        </div>
+      </div>
 
-		<a
-			href="https://discord.gg/GAQcFTzs"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="transition-colors hover:text-red-400"
-		>
-			Discord
-		</a>
-		</div>
-
+      <div class="site-container footer-disclaimer">
+        UNOFFICIAL COMMUNITY TOOL. NOT AFFILIATED WITH
+        OR ENDORSED BY THE CREATORS OF ROTK.
       </div>
     </footer>
+
+    <script>
+      const comparison = document.querySelector<HTMLElement>(
+        "#font-comparison"
+      );
+
+      const range = comparison?.querySelector<HTMLInputElement>(
+        ".comparison-range"
+      );
+
+      if (comparison && range) {
+        const updateComparison = () => {
+          comparison.style.setProperty(
+            "--split",
+            `${range.value}%`
+          );
+        };
+
+        range.addEventListener("input", updateComparison);
+        updateComparison();
+      }
+
+      interface GithubAsset {
+        name: string;
+        download_count: number;
+        browser_download_url: string;
+      }
+
+      interface GithubRelease {
+        tag_name: string;
+        draft: boolean;
+        prerelease: boolean;
+        assets: GithubAsset[];
+      }
+
+      const downloadButton =
+        document.querySelector<HTMLAnchorElement>(
+          "#download-button"
+        );
+
+      const downloadLabel =
+        document.querySelector<HTMLElement>(
+          "#download-label"
+        );
+
+      const downloadStats =
+        document.querySelector<HTMLElement>(
+          "#download-stats"
+        );
+
+      const downloadCount =
+        document.querySelector<HTMLElement>(
+          "#download-count"
+        );
+
+      async function loadDownloadStats() {
+        try {
+          const response = await fetch(
+            "https://api.github.com/repos/benzwd/rotk-fonts-changer/releases?per_page=100",
+            {
+              headers: {
+                Accept: "application/vnd.github+json",
+              },
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(
+              `GitHub API error: ${response.status}`
+            );
+          }
+
+          const releases =
+            (await response.json()) as GithubRelease[];
+
+          // Count downloads across all published releases.
+          const publishedReleases = releases.filter(
+            (release) => !release.draft && !release.prerelease
+          );
+
+          const latestRelease = publishedReleases.find(
+            (release) =>
+              release.assets.some(
+                (asset) =>
+                  asset.name.toLowerCase() ===
+                  "rotkfontchanger.exe"
+              )
+          );
+
+          if (latestRelease) {
+            const version = latestRelease.tag_name.replace(/^v/i, "");
+
+            const appVersion = document.querySelector<HTMLElement>(
+              "#app-version"
+            );
+
+            const previewVersion = document.querySelector<HTMLElement>(
+              "#preview-version"
+            );
+
+            if (appVersion) {
+              appVersion.textContent = version;
+            }
+
+            if (previewVersion) {
+              previewVersion.textContent = `v${version}`;
+            }
+          }
+
+          const executableAssets = publishedReleases.flatMap(
+            (release) =>
+              release.assets.filter(
+                (asset) =>
+                  asset.name.toLowerCase() ===
+                  "rotkfontchanger.exe"
+              )
+          );
+
+          // No executable release yet.
+          if (executableAssets.length === 0) {
+            return;
+          }
+
+          const totalDownloads = executableAssets.reduce(
+            (total, asset) =>
+              total + asset.download_count,
+            0
+          );
+
+          // First executable of the latest published release
+          // that actually contains the application.
+          const latestExecutable = publishedReleases
+            .flatMap((release) =>
+              release.assets.filter(
+                (asset) =>
+                  asset.name.toLowerCase() ===
+                  "rotkfontchanger.exe"
+              )
+            )[0];
+
+          if (
+            downloadButton &&
+            downloadLabel &&
+            latestExecutable
+          ) {
+            downloadButton.href =
+              latestExecutable.browser_download_url;
+
+            downloadButton.classList.remove(
+              "button-disabled"
+            );
+
+            downloadButton.removeAttribute(
+              "aria-disabled"
+            );
+
+            downloadButton.removeAttribute(
+              "tabindex"
+            );
+
+            downloadLabel.textContent =
+              "DOWNLOAD FOR WINDOWS";
+          }
+
+          if (downloadStats && downloadCount) {
+            downloadCount.textContent =
+              totalDownloads.toLocaleString("en-US");
+
+            downloadStats.hidden = false;
+          }
+        } catch (error) {
+          console.error(
+            "Failed to load GitHub download stats:",
+            error
+          );
+        }
+      }
+
+      loadDownloadStats();
+
+    </script>
   </body>
 </html>
