@@ -1,16 +1,280 @@
+
 ---
+import "../styles/global.css";
+
+const github =
+  "https://github.com/benzwd/rotk-font-changer";
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+
+		<title>
+			ROTK Font Changer
+		</title>
+
+		<meta
+			name="description"
+			content="ROTK Font Changer is a free Windows utility for customizing ROTK Z1 game fonts. Preview custom TTF fonts, apply changes and restore defaults easily."
+		/>
+
+		<meta name="robots" content="index, follow" />
+
+		<link
+			rel="canonical"
+			href="https://rotkfontchanger.com/"
+		/>
+
+		<link
+			rel="sitemap"
+			href="/sitemap-index.xml"
+		/>
+
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content="ROTK Font Changer"
+		/>
+		<meta
+			property="og:description"
+			content="Customize your ROTK Z1 fonts with a free Windows desktop utility."
+		/>
+		<meta
+			property="og:url"
+			content="https://rotkfontchanger.com/"
+		/>
+
+		<meta name="theme-color" content="#b91c2b" />
 	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+
+  <body class="min-h-screen">
+    <header class="border-b border-white/10">
+      <nav
+        class="mx-auto flex max-w-6xl items-center
+               justify-between px-6 py-5"
+      >
+        <a href="/" class="text-lg font-bold">
+          <span class="text-red-400">ROTK</span>
+          Font Changer
+        </a>
+
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-zinc-400 hover:text-white"
+        >
+          GitHub ↗
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="relative mx-auto max-w-6xl px-6
+               py-28 text-center"
+      >
+		<div
+		class="absolute inset-0 -z-10
+				bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.18),transparent_65%)]"
+		></div>
+		
+        <span
+          class="rounded-full border border-red-500/30
+                 bg-red-500/10 px-4 py-2
+                 text-sm text-red-300"
+        >
+          Windows Desktop Utility
+        </span>
+
+        <h1
+          class="mt-8 text-5xl font-extrabold
+                 tracking-tight md:text-7xl"
+        >
+          Your font.
+          <span class="text-red-400">
+            Your game.
+          </span>
+        </h1>
+
+        <p
+          class="mx-auto mt-6 max-w-2xl
+                 text-lg leading-8 text-zinc-400"
+        >
+          Customize your ROTK fonts in seconds.
+          Preview, apply and restore your fonts
+          with a simple desktop application.
+        </p>
+
+        <div
+          class="mt-10 flex flex-wrap
+                 justify-center gap-4"
+        >
+          <span
+            class="cursor-not-allowed rounded-xl
+                   bg-red-600/50 px-7 py-4
+                   font-semibold text-white/80"
+            aria-disabled="true"
+          >
+            Download coming soon
+          </span>
+
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-xl border border-white/15
+                   px-7 py-4 font-semibold
+                   hover:bg-white/5"
+          >
+            View on GitHub
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm text-zinc-500">
+          Windows • Free • Version 0.1.0
+        </p>
+
+      </section>
+
+      <section
+        id="features"
+        class="mx-auto max-w-6xl px-6 pb-28"
+      >
+        <h2
+          class="mb-10 text-center text-3xl
+                 font-bold"
+        >
+          Everything you need.
+        </h2>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          {
+            [
+              {
+                icon: "Aa",
+                title: "Live Font Preview",
+                description:
+                  "See how your custom font looks before applying it.",
+              },
+              {
+                icon: "↗",
+                title: "One-Click Apply",
+                description:
+                  "Generate and replace the 19 game font files.",
+              },
+              {
+                icon: "↺",
+                title: "Restore Defaults",
+                description:
+                  "Restore the original fonts whenever you want.",
+              },
+            ].map((feature) => (
+              <article
+                class="rounded-2xl border border-white/10
+                       bg-white/[0.03] p-7"
+              >
+                <div
+                  class="mb-5 flex h-12 w-12
+                         items-center justify-center
+                         rounded-xl bg-red-500/15
+                         text-xl font-bold text-red-300"
+                >
+                  {feature.icon}
+                </div>
+
+                <h3 class="mb-3 text-xl font-semibold">
+                  {feature.title}
+                </h3>
+
+                <p class="leading-7 text-zinc-400">
+                  {feature.description}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+
+
+	<!-- Buy Me a Coffee floating button -->
+	<div
+	class="pointer-events-none sticky bottom-6 z-50
+			mx-auto flex max-w-6xl justify-end px-6"
+	>
+	<a
+		href="https://buymeacoffee.com/zwdev"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Support me on Buy Me a Coffee"
+		class="group pointer-events-auto flex items-center
+			gap-2 rounded-full bg-[#FFDD00] p-4
+			text-black shadow-lg shadow-black/30
+			transition-all duration-300
+			hover:-translate-y-1 hover:shadow-xl
+			hover:shadow-yellow-500/20"
+	>
+		<span class="text-xl leading-none">☕</span>
+
+		<span
+		class="hidden max-w-0 overflow-hidden
+				whitespace-nowrap text-sm font-bold
+				opacity-0 transition-all duration-300
+				group-hover:max-w-40
+				group-hover:opacity-100
+				md:block"
+		>
+		Buy Me a Coffee
+		</span>
+	</a>
+	</div>
+
+
+    <footer class="border-t border-white/10 py-8">
+      <div
+        class="mx-auto flex max-w-6xl flex-wrap
+               justify-between gap-4 px-6
+               text-sm text-zinc-500"
+      >
+        <span>
+			© 2026 ROTK Font Changer — Made by{" "}
+			<a
+				href="https://github.com/benzwd"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="font-medium text-red-400 hover:text-red-300"
+			>
+				Feniix
+			</a>
+		</span>
+
+		<div class="flex items-center gap-5">
+		<a
+			href={github}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="transition-colors hover:text-red-400"
+		>
+			Source code
+		</a>
+
+		<a
+			href="https://discord.gg/GAQcFTzs"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="transition-colors hover:text-red-400"
+		>
+			Discord
+		</a>
+		</div>
+
+      </div>
+    </footer>
+  </body>
 </html>
